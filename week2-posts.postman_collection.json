@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "6a13ba83-2589-4ccf-8b81-00e3b277ba0e",
+		"name": "week2-posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16089059"
+	},
+	"item": [
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"name\":\"test\",\n    \"content\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aplhost}}/posts",
+					"host": [
+						"{{aplhost}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"content\": \"modify ! !!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{aplhost}}/posts/661ffd0cc0d85687c5dc0c16",
+					"host": [
+						"{{aplhost}}"
+					],
+					"path": [
+						"posts",
+						"661ffd0cc0d85687c5dc0c16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{aplhost}}/posts",
+					"host": [
+						"{{aplhost}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{aplhost}}/posts",
+					"host": [
+						"{{aplhost}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除一則貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{aplhost}}/posts/661fdb83b4def339132c6e99",
+					"host": [
+						"{{aplhost}}"
+					],
+					"path": [
+						"posts",
+						"661fdb83b4def339132c6e99"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "aplhost",
+			"value": "https://maintask-week2.onrender.com",
+			"type": "string"
+		}
+	]
+}
